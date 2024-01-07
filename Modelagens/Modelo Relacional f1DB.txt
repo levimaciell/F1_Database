@@ -1,0 +1,22 @@
+Piloto(id(PK), nome, idade, pais(FK))
+pais referencia País
+
+Contratos(piloto(FK), equipe(FK), data_inicio, data_termino)
+piloto referencia Piloto
+equipe referencia Equipe
+
+Equipe(id(PK), nome, sede, pais(FK))
+pais referencia Pais
+
+Pais(id(PK), nome)
+
+Pista(id(PK), nome, tamanho, cidade, pais(FK))
+pais referencia Pais
+
+Corrida(id(PK), nome_evento, data, pista(FK))
+pista referencia Pista
+
+Classificacao(id(PK), piloto(FK), posicao, pontuacao)
+piloto referencia Piloto
+
+
