@@ -1,40 +1,44 @@
 CREATE TABLE Pais(
 	id SERIAL,
-	nome VARCHAR(20),
+	nome VARCHAR(30),
 
-	PRIMARY KEY(id)
+	PRIMARY KEY(id),
+	UNIQUE(nome)
 )
-
---Numeros reais podem ser DECIMAL, DOUBLE PRECISION, REAL, e etc
+select * from pais
 
 CREATE TABLE Pista(
 	id SERIAL, 
-	nome VARCHAR(15) NOT NULL,
+	nome VARCHAR(50) NOT NULL,
 	tamanho DECIMAL,
 	cidade VARCHAR(20),
 	pais INT NOT NULL,
 	
 	PRIMARY KEY(id),
-	FOREIGN KEY (pais) REFERENCES Pais
+	FOREIGN KEY (pais) REFERENCES Pais,
+	UNIQUE(nome)
 )
 
 CREATE TABLE Corrida(
 	id SERIAL, 
-	nome_evento VARCHAR(40) NOT NULL,
+	nome_evento VARCHAR(60) NOT NULL,
 	data_evento DATE NOT NULL,
 	pista INT NOT NULL,
 	
+	PRIMARY KEY(id),
 	FOREIGN KEY(pista) REFERENCES Pista
 )
 
 CREATE TABLE Piloto(
 	id SERIAL, 
 	nome VARCHAR(40) NOT NULL, 
-	idade INT,
-	pais INT NOT NULL,
+	data_de_nascimento Date,
+	local_de_nascimento VARCHAR(20),
+	
+	nacionalidade INT NOT NULL,
 	
 	PRIMARY KEY(id),
-	FOREIGN KEY(pais) REFERENCES Pais
+	FOREIGN KEY(nacionalidade) REFERENCES Pais
 )
 
 CREATE TABLE Equipe(
@@ -59,12 +63,12 @@ CREATE TABLE Contratos(
 
 CREATE TABLE Classificacao(
 	id SERIAL,
-	piloto INT,
-	posicao INT NOT NULL,
+	piloto INT NOT NULL, 
+	posicao VARCHAR(5) NOT NULL,
 	pontuacao INT NOT NULL,
+	corrida INT NOT NULL,
 	
-	CHECK(posicao BETWEEN 1 AND 20),
 	PRIMARY KEY(id),
-	FOREIGN KEY(piloto) REFERENCES Piloto
+	FOREIGN KEY(piloto) REFERENCES Piloto,
+	FOREIGN KEY(corrida) REFERENCES Corrida
 )
-

@@ -1,0 +1,25 @@
+INSERT INTO Pista(nome, tamanho, cidade, pais)
+VALUES
+	('Bahrain International Circuit', 5.412, 'Sahkir',  1),
+	('Jeddah Corniche Circuit', 6.175, 'Jeddah', 2),
+	('Albert Park Circuit', 5.278, 'Melbourne', 3),
+	('Baku City Circuit', 6.003, 'Baku', 4),
+	('Miami International Autodrome', 5.412, 'Miami Gardens', 5),
+	('Circuit de Monaco', 3.337, 'Monte Carlo', 6),
+	('Circuit de Barcelona-Catalunya', 4.657, 'Montmeló', 7),
+	('Circuit Gilles Villeneuve', 4.361, 'Montreal', 8),
+	('Red Bull Ring', 4.318, 'Spielberg', 9),
+	('Silverstone Circuit', 5.891, 'Silverstone', 10),
+	('Hungaroring', 4.381, 'Mogyoród', 11),
+	('Circuit de Spa-Francorchamps', 7.004, 'Stavelot', 12),
+	('Circuit Zandvoort', 4.259, 'Zandvoort', 13),
+	('Autodromo Nazionale Monza', 5.793, 'Monza', 14),
+	('Marina Bay Street Circuit', 4.940, 'Singapure', 15),
+	('Suzuka International Racing Course', 5.807, 'Suzuka', 16),
+	('Losail International Circuit', 5.419, 'Lusail', 17),
+	('Circuit of the Americas (COTA)', 5.513, 'Austin', 5),
+	('Autódromo Hermanos Rodríguez', 4.304, 'Mexico City', 18),
+	('Autódromo José Carlos Pace', 4.309, 'São Paulo', 19),
+	('Las Vegas Strip Circuit', 6.201, 'Paradise', 5),
+	('Yas Marina Circuit', 5.281, 'Abu Dhabi', 20)
+	
